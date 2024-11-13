@@ -1,17 +1,19 @@
-
 import React from 'react';
 import './Input.css';
 
-const Input = ({ placeholder, onChange }) => {
+const Input = ({ value, onChange, placeholder }) => {
     return (
         <input
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
             className="input"
             type="text"
             placeholder={placeholder}
-            onChange={(e) => onChange(e.target.value)}
         />
     );
 };
 
 export default Input;
+
+
 
